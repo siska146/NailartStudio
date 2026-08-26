@@ -1,0 +1,2381 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nail Art Studio | Premium Nail Art & Beauty Studio</title>
+  <meta name="description" content="Nail Art Studio menghadirkan layanan premium manicure, gel polish, nail art, extensions, dan luxury nail treatment dengan desain elegan dan profesional.">
+  <meta name="keywords" content="nail art, salon nail art, nail art studio, manicure, gel polish, nail extension">
+  <meta name="author" content="Nail Art Studio">
+
+  <meta property="og:title" content="Nail Art Studio | Beautiful Nails, Beautiful You">
+  <meta property="og:description" content="Premium nail art studio untuk kuku cantik dan elegan.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root {
+      --pink: #e8b8bd;
+      --pink-dark: #c98991;
+      --pink-light: #f9e9e9;
+      --cream: #fffaf6;
+      --nude: #ead8cd;
+      --rose-gold: #b77b70;
+      --brown: #3a2927;
+      --brown-light: #705b57;
+      --white: #ffffff;
+      --border: rgba(58, 41, 39, 0.10);
+      --shadow: 0 20px 60px rgba(58, 41, 39, 0.10);
+      --radius: 24px;
+      --transition: 0.35s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: var(--brown);
+      background: var(--cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      border: none;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1180px, 90%);
+      margin: auto;
+    }
+
+    .section {
+      padding: 110px 0;
+    }
+
+    .section-label {
+      color: var(--rose-gold);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(38px, 5vw, 58px);
+      line-height: 1.15;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .section-desc {
+      color: var(--brown-light);
+      max-width: 650px;
+      margin-bottom: 45px;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-center .section-desc {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 22px 0;
+      transition: var(--transition);
+    }
+
+    .navbar.scrolled {
+      background: rgba(255, 250, 246, 0.94);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 8px 30px rgba(58, 41, 39, 0.08);
+      padding: 14px 0;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--rose-gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 500;
+      position: relative;
+    }
+
+    .nav-links a:not(.nav-btn)::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -7px;
+      width: 0;
+      height: 1px;
+      background: var(--rose-gold);
+      transition: var(--transition);
+    }
+
+    .nav-links a:not(.nav-btn):hover::after {
+      width: 100%;
+    }
+
+    .nav-btn,
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 25px;
+      border-radius: 50px;
+      background: var(--brown);
+      color: var(--white);
+      font-size: 13px;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .nav-btn:hover,
+    .btn:hover {
+      background: var(--rose-gold);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(183, 123, 112, 0.25);
+    }
+
+    .btn-light {
+      background: rgba(255,255,255,0.9);
+      color: var(--brown);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(58,41,39,.25);
+      color: var(--brown);
+    }
+
+    .btn-outline:hover {
+      color: white;
+      border-color: var(--rose-gold);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      font-size: 24px;
+      color: var(--brown);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(90deg, rgba(255,250,246,.96) 0%, rgba(255,250,246,.82) 42%, rgba(255,250,246,.15) 100%),
+        url("https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1800&q=90") center/cover;
+    }
+
+    .hero-content {
+      max-width: 680px;
+      padding-top: 80px;
+      animation: fadeUp 1s ease both;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 8px 15px;
+      border: 1px solid rgba(183,123,112,.35);
+      border-radius: 50px;
+      color: var(--rose-gold);
+      font-size: 11px;
+      letter-spacing: 2px;
+      font-weight: 600;
+      margin-bottom: 25px;
+      background: rgba(255,255,255,.55);
+      backdrop-filter: blur(5px);
+    }
+
+    .hero h1 {
+      font-family: "Playfair Display", serif;
+      font-size: clamp(58px, 8vw, 95px);
+      line-height: .98;
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: var(--rose-gold);
+      font-style: italic;
+    }
+
+    .hero p {
+      color: var(--brown-light);
+      font-size: 16px;
+      max-width: 560px;
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-decor {
+      position: absolute;
+      right: 5%;
+      bottom: 8%;
+      font-family: "Playfair Display", serif;
+      font-size: 90px;
+      color: rgba(183,123,112,.15);
+      transform: rotate(-10deg);
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-images {
+      position: relative;
+      min-height: 600px;
+    }
+
+    .about-img {
+      position: absolute;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .about-img.one {
+      width: 72%;
+      height: 440px;
+      left: 0;
+      top: 0;
+    }
+
+    .about-img.two {
+      width: 55%;
+      height: 330px;
+      right: 0;
+      bottom: 0;
+      border: 10px solid white;
+    }
+
+    .about-card {
+      position: absolute;
+      left: 25px;
+      bottom: 50px;
+      background: white;
+      padding: 18px 24px;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      z-index: 2;
+    }
+
+    .about-card strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      color: var(--rose-gold);
+    }
+
+    .about-card small {
+      color: var(--brown-light);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    .stat {
+      padding: 22px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      background: var(--cream);
+    }
+
+    .stat strong {
+      display: block;
+      font-family: "Playfair Display", serif;
+      color: var(--rose-gold);
+      font-size: 30px;
+    }
+
+    .stat span {
+      font-size: 12px;
+      color: var(--brown-light);
+    }
+
+    /* SERVICES */
+    .services {
+      background: var(--pink-light);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 35px 30px;
+      border-radius: var(--radius);
+      border: 1px solid transparent;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--nude);
+      box-shadow: var(--shadow);
+    }
+
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      background: var(--pink-light);
+      color: var(--rose-gold);
+      border-radius: 50%;
+      font-size: 21px;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: var(--brown-light);
+      font-size: 13px;
+      margin-bottom: 25px;
+    }
+
+    .service-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .price {
+      color: var(--rose-gold);
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .small-btn {
+      background: var(--brown);
+      color: white;
+      padding: 9px 15px;
+      border-radius: 50px;
+      font-size: 11px;
+    }
+
+    /* PORTFOLIO */
+    .portfolio {
+      background: var(--cream);
+    }
+
+    .filters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      padding: 10px 20px;
+      border-radius: 50px;
+      background: white;
+      border: 1px solid var(--border);
+      color: var(--brown-light);
+      font-size: 12px;
+      transition: var(--transition);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--brown);
+      color: white;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      height: 360px;
+      border-radius: 20px;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .portfolio-item img {
+      height: 100%;
+      transition: .6s ease;
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 25px;
+      color: white;
+      background: linear-gradient(transparent 35%, rgba(30,20,18,.75));
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.07);
+    }
+
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-overlay h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 23px;
+    }
+
+    .portfolio-item.hidden {
+      display: none;
+    }
+
+    /* PRICE */
+    .pricing {
+      background: var(--white);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+      align-items: stretch;
+    }
+
+    .price-card {
+      padding: 40px 32px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--cream);
+      position: relative;
+    }
+
+    .price-card.featured {
+      background: var(--brown);
+      color: white;
+      transform: translateY(-12px);
+      box-shadow: var(--shadow);
+    }
+
+    .price-card h3 {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    .price-list {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .price-list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 12px;
+    }
+
+    .price-card.featured .price-list li {
+      border-color: rgba(255,255,255,.15);
+    }
+
+    .price-list span:last-child {
+      color: var(--rose-gold);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .featured .price-list span:last-child {
+      color: var(--pink);
+    }
+
+    /* WHY */
+    .why {
+      background: var(--pink-light);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+    }
+
+    .why-card {
+      background: white;
+      text-align: center;
+      padding: 30px 18px;
+      border-radius: 20px;
+      transition: var(--transition);
+    }
+
+    .why-card:hover {
+      transform: translateY(-7px);
+    }
+
+    .why-card i {
+      font-size: 27px;
+      color: var(--rose-gold);
+      margin-bottom: 18px;
+    }
+
+    .why-card h3 {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    /* BEFORE AFTER */
+    .transformation {
+      background: var(--white);
+    }
+
+    .transformation-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .comparison {
+      position: relative;
+      height: 440px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .comparison img {
+      height: 100%;
+    }
+
+    .comparison-label {
+      position: absolute;
+      top: 20px;
+      padding: 7px 13px;
+      border-radius: 50px;
+      background: rgba(255,255,255,.9);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .comparison .before {
+      left: 20px;
+    }
+
+    .comparison .after {
+      right: 20px;
+      background: var(--brown);
+      color: white;
+    }
+
+    /* REVIEWS */
+    .reviews {
+      background: var(--cream);
+    }
+
+    .review-wrapper {
+      max-width: 780px;
+      margin: auto;
+      position: relative;
+    }
+
+    .review-card {
+      background: white;
+      padding: 50px;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: var(--shadow);
+      display: none;
+    }
+
+    .review-card.active {
+      display: block;
+      animation: fadeUp .5s ease;
+    }
+
+    .stars {
+      color: #d59b43;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+
+    .review-text {
+      font-family: "Playfair Display", serif;
+      font-size: 25px;
+      line-height: 1.5;
+      margin-bottom: 25px;
+    }
+
+    .review-user {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .review-user img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+    }
+
+    .review-user strong {
+      display: block;
+      font-size: 13px;
+    }
+
+    .review-user span {
+      font-size: 11px;
+      color: var(--brown-light);
+    }
+
+    .review-controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .review-control {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: white;
+      color: var(--brown);
+      border: 1px solid var(--border);
+    }
+
+    /* INSTAGRAM */
+    .instagram {
+      background: white;
+    }
+
+    .instagram-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+    }
+
+    .instagram-item {
+      aspect-ratio: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .instagram-item img {
+      height: 100%;
+      transition: .5s;
+    }
+
+    .instagram-item:hover img {
+      transform: scale(1.08);
+      filter: brightness(.75);
+    }
+
+    /* BOOKING */
+    .booking {
+      padding: 100px 0;
+      background:
+        linear-gradient(rgba(58,41,39,.85), rgba(58,41,39,.85)),
+        url("https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=1800&q=85") center/cover;
+      color: white;
+      text-align: center;
+    }
+
+    .booking .section-title {
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .booking p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      color: rgba(255,255,255,.75);
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--cream);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 18px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 17px;
+      padding: 20px;
+      background: white;
+      border-radius: 18px;
+    }
+
+    .contact-icon {
+      width: 45px;
+      height: 45px;
+      min-width: 45px;
+      border-radius: 50%;
+      background: var(--pink-light);
+      display: grid;
+      place-items: center;
+      color: var(--rose-gold);
+    }
+
+    .contact-item strong {
+      display: block;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+
+    .contact-item span,
+    .contact-item a {
+      color: var(--brown-light);
+      font-size: 12px;
+    }
+
+    .map {
+      min-height: 100%;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      border: 0;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #251b19;
+      color: white;
+      padding: 70px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 50px;
+    }
+
+    .footer-logo {
+      font-family: "Playfair Display", serif;
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+
+    .footer-logo span {
+      color: var(--pink);
+    }
+
+    .footer-about {
+      color: rgba(255,255,255,.55);
+      font-size: 12px;
+      max-width: 300px;
+    }
+
+    .footer-column h4 {
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-column a,
+    .footer-column li {
+      color: rgba(255,255,255,.55);
+      font-size: 11px;
+    }
+
+    .footer-column a:hover {
+      color: var(--pink);
+    }
+
+    .socials {
+      display: flex;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .socials a {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      transition: var(--transition);
+    }
+
+    .socials a:hover {
+      background: var(--pink);
+      color: var(--brown);
+    }
+
+    .copyright {
+      padding-top: 25px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      color: rgba(255,255,255,.4);
+      text-align: center;
+      font-size: 10px;
+    }
+
+    /* FLOATING WHATSAPP */
+    .whatsapp {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      font-size: 28px;
+      z-index: 900;
+      box-shadow: 0 10px 30px rgba(37,211,102,.35);
+      animation: pulse 2s infinite;
+    }
+
+    /* BACK TOP */
+    .back-top {
+      position: fixed;
+      right: 24px;
+      bottom: 95px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--brown);
+      color: white;
+      display: grid;
+      place-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      z-index: 899;
+    }
+
+    .back-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      background: rgba(25,17,16,.92);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      padding: 30px;
+    }
+
+    .lightbox.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lightbox img {
+      max-width: 850px;
+      max-height: 85vh;
+      width: auto;
+      border-radius: 15px;
+      box-shadow: 0 20px 70px rgba(0,0,0,.4);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+      color: white;
+      font-size: 35px;
+      background: none;
+    }
+
+    /* REVEAL */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        box-shadow: 0 10px 30px rgba(37,211,102,.35);
+      }
+      50% {
+        box-shadow: 0 10px 40px rgba(37,211,102,.65);
+      }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+      .nav-links {
+        gap: 17px;
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 800px) {
+      .section {
+        padding: 80px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 5%;
+        width: 90%;
+        padding: 25px;
+        background: rgba(255,250,246,.98);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-images {
+        min-height: 500px;
+      }
+
+      .service-grid,
+      .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        min-height: 850px;
+        background:
+          linear-gradient(rgba(255,250,246,.88), rgba(255,250,246,.88)),
+          url("https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=85") center/cover;
+      }
+
+      .hero h1 {
+        font-size: 55px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .about-images {
+        min-height: 410px;
+      }
+
+      .about-img.one {
+        height: 300px;
+      }
+
+      .about-img.two {
+        height: 230px;
+      }
+
+      .service-grid,
+      .pricing-grid,
+      .portfolio-grid,
+      .transformation-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .portfolio-item {
+        height: 390px;
+      }
+
+      .price-card.featured {
+        transform: none;
+      }
+
+      .review-card {
+        padding: 35px 22px;
+      }
+
+      .review-text {
+        font-size: 21px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .instagram-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .map iframe {
+        min-height: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">nail art <span>studio</span></a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#pricing">Price List</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#booking" class="nav-btn">Book Appointment</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-sparkles"></i>
+            PREMIUM NAIL ART STUDIO
+          </div>
+
+          <h1>
+            Beautiful Nails,<br>
+            <span>Beautiful You.</span>
+          </h1>
+
+          <p>
+            Temukan desain kuku yang elegan, personal, dan sesuai dengan
+            gaya kamu. Karena setiap detail kecil layak terlihat indah.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#portfolio" class="btn">
+              Explore Our Work
+              <i class="fas fa-arrow-right"></i>
+            </a>
+
+            <a href="#booking" class="btn btn-outline">
+              Book Appointment
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-decor">nails & beauty</div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+
+        <div class="about-images reveal">
+          <div class="about-img one">
+            <img
+              src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=900&q=85"
+              alt="Proses nail art profesional"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="about-img two">
+            <img
+              src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=85"
+              alt="Hasil nail art elegan"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="about-card">
+            <strong>5+</strong>
+            <small>Years of Experience</small>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="section-label">About Our Studio</div>
+
+          <h2 class="section-title">
+            Where Beauty Meets Creativity
+          </h2>
+
+          <p class="section-desc">
+            Nail Art Studio adalah perusahaan nail art yang menghadirkan
+            layanan perawatan dan desain kuku dengan standar profesional.
+            Kami mengutamakan kualitas, kebersihan, detail, dan kreativitas
+            dalam setiap hasil nail art.
+          </p>
+
+          <p class="section-desc">
+            Dari desain minimalis hingga luxury custom nail art,
+            setiap treatment dibuat untuk memberikan pengalaman yang
+            personal dan hasil yang membuat kamu semakin percaya diri.
+          </p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>5K+</strong>
+              <span>Happy Clients</span>
+            </div>
+
+            <div class="stat">
+              <strong>100+</strong>
+              <span>Nail Designs</span>
+            </div>
+
+            <div class="stat">
+              <strong>4.9/5</strong>
+              <span>Client Rating</span>
+            </div>
+
+            <div class="stat">
+              <strong>100%</strong>
+              <span>Premium Care</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+      <div class="container">
+
+        <div class="text-center reveal">
+          <div class="section-label">Our Services</div>
+          <h2 class="section-title">Treat Yourself Beautifully</h2>
+          <p class="section-desc">
+            Pilih treatment favoritmu dan biarkan nail artist kami
+            menciptakan tampilan kuku yang sesuai dengan kepribadianmu.
+          </p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="fas fa-hand-sparkles"></i>
+            </div>
+            <h3>Classic Manicure</h3>
+            <p>
+              Perawatan kuku dasar dengan hasil bersih, sehat, dan elegan.
+            </p>
+            <div class="service-bottom">
+              <span class="price">Mulai Rp75.000</span>
+              <button class="small-btn book-service" data-service="Classic Manicure">
+                Book Now
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="fas fa-paint-brush"></i>
+            </div>
+            <h3>Gel Polish</h3>
+            <p>
+              Gel polish tahan lama dengan berbagai pilihan warna premium.
+            </p>
+            <div class="service-bottom">
+              <span class="price">Mulai Rp120.000</span>
+              <button class="small-btn book-service" data-service="Gel Polish">
+                Book Now
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3>Nail Art</h3>
+            <p>
+              Desain kuku custom yang dibuat sesuai keinginan dan gayamu.
+            </p>
+            <div class="service-bottom">
+              <span class="price">Mulai Rp150.000</span>
+              <button class="small-btn book-service" data-service="Nail Art">
+                Book Now
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>French Manicure</h3>
+            <p>
+              Tampilan klasik, clean, timeless, dan cocok untuk berbagai acara.
+            </p>
+            <div class="service-bottom">
+              <span class="price">Mulai Rp130.000</span>
+              <button class="small-btn book-service" data-service="French Manicure">
+                Book Now
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="fas fa-gem"></i>
+            </div>
+            <h3>Extensions</h3>
+            <p>
+              Nail extension premium untuk tampilan kuku yang lebih panjang.
+            </p>
+            <div class="service-bottom">
+              <span class="price">Mulai Rp300.000</span>
+              <button class="small-btn book-service" data-service="Nail Extensions">
+                Book Now
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-icon">
+              <i class="fas fa-spa"></i>
+            </div>
+            <h3>Luxury Treatment</h3>
+            <p>
+              Perawatan premium untuk kuku dan tangan dengan pengalaman relaksasi.
+            </p>
+            <div class="service-bottom">
+              <span class="price">Mulai Rp200.000</span>
+              <button class="small-btn book-service" data-service="Luxury Nail Treatment">
+                Book Now
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section portfolio" id="portfolio">
+      <div class="container">
+
+        <div class="text-center reveal">
+          <div class="section-label">Our Portfolio</div>
+          <h2 class="section-title">Our Nail Art Collection</h2>
+          <p class="section-desc">
+            Temukan inspirasi desain kuku favoritmu dari koleksi kami.
+          </p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="minimalist">Minimalist</button>
+          <button class="filter-btn" data-filter="french">French</button>
+          <button class="filter-btn" data-filter="korean">Korean</button>
+          <button class="filter-btn" data-filter="glitter">Glitter</button>
+          <button class="filter-btn" data-filter="floral">Floral</button>
+          <button class="filter-btn" data-filter="luxury">Luxury</button>
+        </div>
+
+        <div class="portfolio-grid">
+
+          <div class="portfolio-item reveal" data-category="minimalist">
+            <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=700&q=85" alt="Minimalist nail art" loading="lazy">
+            <div class="portfolio-overlay">
+              <div>
+                <h3>Soft Minimalist</h3>
+                <small>Minimalist</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item reveal" data-category="french">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=85" alt="French manicure" loading="lazy">
+            <div class="portfolio-overlay">
+              <div>
+                <h3>Classic French</h3>
+                <small>French</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item reveal" data-category="korean">
+            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=700&q=85" alt="Korean nail art" loading="lazy">
+            <div class="portfolio-overlay">
+              <div>
+                <h3>Korean Blush</h3>
+                <small>Korean</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item reveal" data-category="glitter">
+            <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=700&q=85" alt="Glitter nail art" loading="lazy">
+            <div class="portfolio-overlay">
+              <div>
+                <h3>Rose Gold Glitter</h3>
+                <small>Glitter</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item reveal" data-category="floral">
+            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=700&q=85" alt="Floral nail art" loading="lazy">
+            <div class="portfolio-overlay">
+              <div>
+                <h3>Floral Romance</h3>
+                <small>Floral</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item reveal" data-category="luxury">
+            <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=700&q=85" alt="Luxury nail art" loading="lazy">
+            <div class="portfolio-overlay">
+              <div>
+                <h3>Luxury Nude</h3>
+                <small>Luxury</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item reveal" data-category="minimalist">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=700&q=85" alt="Nude minimalist nails" loading="lazy">
+            <div class="portfolio-overlay">
+              <div>
+                <h3>Nude Elegance</h3>
+                <small>Minimalist</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item reveal" data-category="glitter">
+            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=700&q=85" alt="Elegant glitter nails" loading="lazy">
+            <div class="portfolio-overlay">
+              <div>
+                <h3>Champagne Shine</h3>
+                <small>Glitter</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="portfolio-item reveal" data-category="luxury">
+            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=700&q=85" alt="Premium luxury nails" loading="lazy">
+            <div class="portfolio-overlay">
+              <div>
+                <h3>Luxury Pearl</h3>
+                <small>Luxury</small>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICE LIST -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+
+        <div class="text-center reveal">
+          <div class="section-label">Price List</div>
+          <h2 class="section-title">Simple, Elegant & Transparent</h2>
+          <p class="section-desc">
+            Pilih layanan yang sesuai dengan kebutuhan dan gaya kamu.
+          </p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <div class="price-card reveal">
+            <h3>Manicure</h3>
+
+            <ul class="price-list">
+              <li>
+                <span>Classic Manicure</span>
+                <span>Rp75K</span>
+              </li>
+              <li>
+                <span>Gel Manicure</span>
+                <span>Rp120K</span>
+              </li>
+              <li>
+                <span>French Manicure</span>
+                <span>Rp130K</span>
+              </li>
+            </ul>
+
+            <button class="btn book-service" data-service="Manicure">
+              Book This Service
+            </button>
+          </div>
+
+          <div class="price-card featured reveal">
+            <h3>Nail Art</h3>
+
+            <ul class="price-list">
+              <li>
+                <span>Simple Nail Art</span>
+                <span>Rp150K</span>
+              </li>
+              <li>
+                <span>Premium Nail Art</span>
+                <span>Rp250K</span>
+              </li>
+              <li>
+                <span>Custom Design</span>
+                <span>Rp200K+</span>
+              </li>
+            </ul>
+
+            <button class="btn btn-light book-service" data-service="Premium Nail Art">
+              Book This Service
+            </button>
+          </div>
+
+          <div class="price-card reveal">
+            <h3>Extensions</h3>
+
+            <ul class="price-list">
+              <li>
+                <span>Gel Extension</span>
+                <span>Rp300K</span>
+              </li>
+              <li>
+                <span>Premium Extension</span>
+                <span>Rp400K</span>
+              </li>
+              <li>
+                <span>Extension Refill</span>
+                <span>Rp200K</span>
+              </li>
+            </ul>
+
+            <button class="btn book-service" data-service="Nail Extensions">
+              Book This Service
+            </button>
+          </div>
+
+        </div>
+
+        <p style="text-align:center;color:#705b57;font-size:11px;margin-top:25px;">
+          *Harga dapat berubah tergantung tingkat kesulitan desain dan material yang digunakan.
+        </p>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section why">
+      <div class="container">
+
+        <div class="text-center reveal">
+          <div class="section-label">Our Difference</div>
+          <h2 class="section-title">Why Clients Choose Us</h2>
+        </div>
+
+        <div class="why-grid">
+
+          <div class="why-card reveal">
+            <i class="fas fa-user-tie"></i>
+            <h3>Professional Nail Artists</h3>
+          </div>
+
+          <div class="why-card reveal">
+            <i class="fas fa-gem"></i>
+            <h3>Premium Materials</h3>
+          </div>
+
+          <div class="why-card reveal">
+            <i class="fas fa-shield-heart"></i>
+            <h3>Hygienic & Safe</h3>
+          </div>
+
+          <div class="why-card reveal">
+            <i class="fas fa-wand-magic-sparkles"></i>
+            <h3>Custom Designs</h3>
+          </div>
+
+          <div class="why-card reveal">
+            <i class="fas fa-couch"></i>
+            <h3>Comfortable Studio</h3>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- BEFORE AFTER -->
+    <section class="section transformation">
+      <div class="container">
+
+        <div class="text-center reveal">
+          <div class="section-label">The Transformation</div>
+          <h2 class="section-title">See The Transformation</h2>
+          <p class="section-desc">
+            Detail kecil dapat membuat perbedaan besar.
+          </p>
+        </div>
+
+        <div class="transformation-grid">
+
+          <div class="comparison reveal">
+            <img
+              src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1000&q=85"
+              alt="Before and after nail treatment"
+              loading="lazy"
+            >
+            <span class="comparison-label before">BEFORE</span>
+            <span class="comparison-label after">AFTER</span>
+          </div>
+
+          <div class="comparison reveal">
+            <img
+              src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1000&q=85"
+              alt="Nail art transformation"
+              loading="lazy"
+            >
+            <span class="comparison-label before">BEFORE</span>
+            <span class="comparison-label after">AFTER</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section reviews" id="reviews">
+      <div class="container">
+
+        <div class="text-center reveal">
+          <div class="section-label">Client Reviews</div>
+          <h2 class="section-title">What Our Clients Say</h2>
+        </div>
+
+        <div class="review-wrapper reveal">
+
+          <div class="review-card active">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              "Hasil nail art-nya cantik banget dan detailnya rapi.
+              Staff-nya juga ramah dan studionya nyaman."
+            </p>
+            <div class="review-user">
+              <img src="https://i.pravatar.cc/100?img=47" alt="Sarah">
+              <div>
+                <strong>Sarah</strong>
+                <span>Happy Client</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              "Aku suka banget hasilnya. Desainnya persis seperti
+              reference yang aku kasih. Definitely coming back!"
+            </p>
+            <div class="review-user">
+              <img src="https://i.pravatar.cc/100?img=32" alt="Jessica">
+              <div>
+                <strong>Jessica</strong>
+                <span>Happy Client</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              "Pelayanannya profesional, tempatnya aesthetic,
+              dan hasil manicure-nya super clean."
+            </p>
+            <div class="review-user">
+              <img src="https://i.pravatar.cc/100?img=25" alt="Amanda">
+              <div>
+                <strong>Amanda</strong>
+                <span>Happy Client</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="stars">★★★★★</div>
+            <p class="review-text">
+              "Worth it banget! Pilihan warnanya banyak dan nail
+              artist-nya detail sekali."
+            </p>
+            <div class="review-user">
+              <img src="https://i.pravatar.cc/100?img=44" alt="Nadia">
+              <div>
+                <strong>Nadia</strong>
+                <span>Happy Client</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-controls">
+            <button class="review-control" id="prevReview">
+              <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="review-control" id="nextReview">
+              <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="section instagram">
+      <div class="container">
+
+        <div class="text-center reveal">
+          <div class="section-label">Social Media</div>
+          <h2 class="section-title">Follow Our Nail Journey</h2>
+          <p class="section-desc">
+            Ikuti koleksi terbaru dan inspirasi nail art kami di Instagram.
+          </p>
+        </div>
+
+        <div class="instagram-grid reveal">
+
+          <a href="#" class="instagram-item">
+            <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=500&q=80" alt="Instagram nail art" loading="lazy">
+          </a>
+
+          <a href="#" class="instagram-item">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=500&q=80" alt="Instagram nail art" loading="lazy">
+          </a>
+
+          <a href="#" class="instagram-item">
+            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=500&q=80" alt="Instagram nail art" loading="lazy">
+          </a>
+
+          <a href="#" class="instagram-item">
+            <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=500&q=80" alt="Instagram nail art" loading="lazy">
+          </a>
+
+          <a href="#" class="instagram-item">
+            <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=500&q=80" alt="Instagram nail art" loading="lazy">
+          </a>
+
+          <a href="#" class="instagram-item">
+            <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=500&q=80" alt="Instagram nail art" loading="lazy">
+          </a>
+
+        </div>
+
+        <div class="text-center" style="margin-top:30px;">
+          <a href="#" class="btn btn-outline">
+            <i class="fab fa-instagram"></i>
+            @nailartstudio
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="booking" id="booking">
+      <div class="container reveal">
+
+        <div class="section-label" style="color:#e8b8bd;">
+          Book Your Moment
+        </div>
+
+        <h2 class="section-title">
+          Ready to Make Your Nails Beautiful?
+        </h2>
+
+        <p>
+          Book your appointment today and let our nail artists create
+          something beautiful just for you.
+        </p>
+
+        <a href="#" class="btn btn-light" id="bookingBtn">
+          <i class="fab fa-whatsapp"></i>
+          Book Appointment
+        </a>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="container">
+
+        <div class="text-center reveal">
+          <div class="section-label">Get In Touch</div>
+          <h2 class="section-title">Visit Our Studio</h2>
+          <p class="section-desc">
+            Kami siap membuat pengalaman nail art kamu menjadi lebih spesial.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+
+          <div class="contact-info reveal">
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-location-dot"></i>
+              </div>
+              <div>
+                <strong>Address</strong>
+                <span>Jl. Beauty No. 88, Jakarta, Indonesia</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-whatsapp"></i>
+              </div>
+              <div>
+                <strong>WhatsApp</strong>
+                <a href="#" class="wa-link">+62 812-3456-7890</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div>
+                <strong>Instagram</strong>
+                <span>@nailartstudio</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="far fa-clock"></i>
+              </div>
+              <div>
+                <strong>Opening Hours</strong>
+                <span>
+                  Senin–Jumat: 10.00–20.00<br>
+                  Sabtu–Minggu: 09.00–21.00
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="map reveal">
+            <iframe
+              src="https://www.google.com/maps?q=Jakarta,Indonesia&output=embed"
+              loading="lazy"
+              title="Lokasi Nail Art Studio">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <div class="footer-logo">
+            nail art <span>studio</span>
+          </div>
+
+          <p class="footer-about">
+            Premium nail art studio for beautiful and confident women.
+            Kami percaya bahwa kuku yang indah adalah bagian dari
+            ekspresi diri.
+          </p>
+
+          <div class="socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Manicure</a></li>
+            <li><a href="#services">Gel Polish</a></li>
+            <li><a href="#services">Nail Art</a></li>
+            <li><a href="#services">Extensions</a></li>
+            <li><a href="#services">Luxury Treatment</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul>
+            <li>Jakarta, Indonesia</li>
+            <li>+62 812-3456-7890</li>
+            <li>@nailartstudio</li>
+            <li>Open Daily</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 Nail Art Studio. All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- WHATSAPP -->
+  <a
+    href="#"
+    class="whatsapp"
+    id="whatsappFloat"
+    aria-label="Chat WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- BACK TO TOP -->
+  <button class="back-top" id="backTop" aria-label="Kembali ke atas">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <img id="lightboxImage" src="" alt="Portfolio nail art">
+  </div>
+
+  <script>
+    /* ==========================
+       CONFIGURATION
+    ========================== */
+
+    const WHATSAPP_NUMBER = "6281234567890";
+
+    const BRAND_NAME = "Nail Art Studio";
+
+
+    /* ==========================
+       WHATSAPP
+    ========================== */
+
+    function openWhatsApp(message) {
+      const url =
+        "https://wa.me/" +
+        WHATSAPP_NUMBER +
+        "?text=" +
+        encodeURIComponent(message);
+
+      window.open(url, "_blank");
+    }
+
+    document.querySelectorAll(".book-service").forEach(button => {
+      button.addEventListener("click", () => {
+        const service = button.dataset.service || "Nail Art";
+
+        openWhatsApp(
+          `Halo ${BRAND_NAME}, saya ingin melakukan booking untuk layanan ${service}. Apakah masih tersedia jadwal?`
+        );
+      });
+    });
+
+    document.getElementById("bookingBtn").addEventListener("click", e => {
+      e.preventDefault();
+
+      openWhatsApp(
+        `Halo ${BRAND_NAME}, saya ingin melakukan booking nail art. Apakah masih tersedia jadwal?`
+      );
+    });
+
+    document.getElementById("whatsappFloat").addEventListener("click", e => {
+      e.preventDefault();
+
+      openWhatsApp(
+        `Halo ${BRAND_NAME}, saya ingin bertanya mengenai layanan nail art.`
+      );
+    });
+
+
+    /* ==========================
+       NAVBAR
+    ========================== */
+
+    const navbar = document.getElementById("navbar");
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+
+      const icon = menuToggle.querySelector("i");
+
+      if (navLinks.classList.contains("active")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+      } else {
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      }
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+
+        const icon = menuToggle.querySelector("i");
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+      });
+    });
+
+
+    /* ==========================
+       PORTFOLIO FILTER
+    ========================== */
+
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
+
+    filterButtons.forEach(button => {
+      button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn => {
+          btn.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        portfolioItems.forEach(item => {
+
+          if (
+            filter === "all" ||
+            item.dataset.category === filter
+          ) {
+            item.classList.remove("hidden");
+          } else {
+            item.classList.add("hidden");
+          }
+
+        });
+      });
+    });
+
+
+    /* ==========================
+       LIGHTBOX
+    ========================== */
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightboxImage");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    document.querySelectorAll(".portfolio-item img").forEach(image => {
+
+      image.addEventListener("click", () => {
+
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden";
+
+      });
+
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      document.body.style.overflow = "";
+    }
+
+    lightboxClose.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", e => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape") {
+        closeLightbox();
+      }
+    });
+
+
+    /* ==========================
+       TESTIMONIAL CAROUSEL
+    ========================== */
+
+    const reviews = document.querySelectorAll(".review-card");
+    const prevReview = document.getElementById("prevReview");
+    const nextReview = document.getElementById("nextReview");
+
+    let currentReview = 0;
+
+    function showReview(index) {
+
+      reviews.forEach(review => {
+        review.classList.remove("active");
+      });
+
+      reviews[index].classList.add("active");
+    }
+
+    nextReview.addEventListener("click", () => {
+
+      currentReview++;
+
+      if (currentReview >= reviews.length) {
+        currentReview = 0;
+      }
+
+      showReview(currentReview);
+
+    });
+
+    prevReview.addEventListener("click", () => {
+
+      currentReview--;
+
+      if (currentReview < 0) {
+        currentReview = reviews.length - 1;
+      }
+
+      showReview(currentReview);
+
+    });
+
+    setInterval(() => {
+
+      currentReview++;
+
+      if (currentReview >= reviews.length) {
+        currentReview = 0;
+      }
+
+      showReview(currentReview);
+
+    }, 6000);
+
+
+    /* ==========================
+       SCROLL REVEAL
+    ========================== */
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    const revealObserver = new IntersectionObserver(
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.12
+      }
+    );
+
+    revealElements.forEach(element => {
+      revealObserver.observe(element);
+    });
+
+
+    /* ==========================
+       BACK TO TOP
+    ========================== */
+
+    const backTop = document.getElementById("backTop");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 500) {
+        backTop.classList.add("show");
+      } else {
+        backTop.classList.remove("show");
+      }
+
+    });
+
+    backTop.addEventListener("click", () => {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
+
+    /* ==========================
+       PHONE NUMBER
+    ========================== */
+
+    document.querySelectorAll(".wa-link").forEach(link => {
+
+      link.addEventListener("click", e => {
+
+        e.preventDefault();
+
+        openWhatsApp(
+          `Halo ${BRAND_NAME}, saya ingin bertanya mengenai layanan nail art.`
+        );
+
+      });
+
+    });
+
+
+    /* ==========================
+       SIMPLE JSON-LD
+    ========================== */
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Nail Art Studio",
+      "description": "Premium nail art studio dengan layanan manicure, nail art, gel polish, extensions dan luxury nail treatment.",
+      "telephone": "+6281234567890",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Jl. Beauty No. 88",
+        "addressLocality": "Jakarta",
+        "addressCountry": "ID"
+      },
+      "openingHours": [
+        "Mo-Fr 10:00-20:00",
+        "Sa-Su 09:00-21:00"
+      ]
+    };
+
+    const schemaScript = document.createElement("script");
+    schemaScript.type = "application/ld+json";
+    schemaScript.textContent = JSON.stringify(schema);
+    document.head.appendChild(schemaScript);
+
+  </script>
+
+</body>
+</html>
